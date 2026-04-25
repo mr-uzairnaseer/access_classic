@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Access | Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="login__container">
+        <div class="top__content">
+          <p>Already have an account?</p>
+          <button onclick="window.location.href='index.html'">Login</button>
+          <h1>SIGN UP</h1>
+        </div>
+        <div class="bottom__content">
+          <form action="#" onsubmit="event.preventDefault(); alert('Account created successfully!'); window.location.href='index.html';">
+            <div class="form__group">
+              <span>
+                <i class="ri-user-line"></i>
+              </span>
+              <input type="text" placeholder="Full Name" required />
+            </div>
+            <div class="form__group">
+              <span>
+                <i class="ri-mail-line"></i>
+              </span>
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form__group">
+              <span>
+                <i class="ri-lock-line"></i>
+              </span>
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="form__group">
+              <span>
+                <i class="ri-lock-check-line"></i>
+              </span>
+              <input type="password" placeholder="Confirm Password" required />
+            </div>
+            <button type="submit">REGISTER</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
