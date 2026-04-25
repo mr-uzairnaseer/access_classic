@@ -19,7 +19,7 @@
           <h1>RECOVERY</h1>
         </div>
         <div class="bottom__content">
-          <form action="#" onsubmit="event.preventDefault(); alert('Reset link sent to your email!'); window.location.href='reset.html';">
+          <form action="#" onsubmit="event.preventDefault(); showSuccess();">
             <p style="color: var(--primary-color-dark); margin-bottom: 1rem;">Enter your email to receive a password reset link.</p>
             <div class="form__group">
               <span>
@@ -32,5 +32,20 @@
         </div>
       </div>
     </div>
+
+    <div id="success-msg" class="success-message">
+      <i class="ri-mail-send-line"></i>
+      <span>Reset link sent to your email!</span>
+    </div>
+
+    <script>
+      function showSuccess() {
+        const msg = document.getElementById('success-msg');
+        msg.classList.add('show');
+        setTimeout(() => {
+          window.location.href = 'reset.html';
+        }, 2000);
+      }
+    </script>
   </body>
 </html>

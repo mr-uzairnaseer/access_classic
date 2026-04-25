@@ -152,3 +152,44 @@ body {
 .bottom__content p a:hover {
   color: var(--primary-color-dark);
 }
+
+/* Success Message Styles */
+.success-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--gradient);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(200%);
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 1000;
+}
+
+.success-message.show {
+  transform: translateX(0);
+}
+
+.success-message i {
+  font-size: 1.5rem;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.login__container {
+  animation: fadeInScale 0.8s ease-out;
+}

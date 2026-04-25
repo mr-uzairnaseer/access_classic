@@ -19,7 +19,7 @@
           <h1>SIGN UP</h1>
         </div>
         <div class="bottom__content">
-          <form action="#" onsubmit="event.preventDefault(); alert('Account created successfully!'); window.location.href='index.html';">
+          <form action="#" onsubmit="event.preventDefault(); showSuccess();">
             <div class="form__group">
               <span>
                 <i class="ri-user-line"></i>
@@ -49,5 +49,20 @@
         </div>
       </div>
     </div>
+
+    <div id="success-msg" class="success-message">
+      <i class="ri-checkbox-circle-line"></i>
+      <span>Account created successfully!</span>
+    </div>
+
+    <script>
+      function showSuccess() {
+        const msg = document.getElementById('success-msg');
+        msg.classList.add('show');
+        setTimeout(() => {
+          window.location.href = 'index.html';
+        }, 2000);
+      }
+    </script>
   </body>
 </html>
